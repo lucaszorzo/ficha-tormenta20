@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.Container-base1 {
+  width: 66.666% !important;
+  display: block;
+  border: 1px solid black;
+  float: left;
+}
+
+.Root {
+  flex-grow: 1;
+}
+
+.Paper {
+  /* height: 140px,
+  width: 100px, */
+}
+
+.Control {
+  /* padding: theme.spacing(2), */
+}
