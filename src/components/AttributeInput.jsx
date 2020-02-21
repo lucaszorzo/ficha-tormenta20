@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Col from 'react-bootstrap/Col'
-import { TextField } from '@material-ui/core'
+import { TextField, Paper } from '@material-ui/core'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class AttributeInput extends Component {
@@ -18,18 +18,20 @@ export default class AttributeInput extends Component {
 
             return (
                 <Col key={element.id}>
-                    <TextField
-                        key={element.id}
-                        id={element.id}
-                        label={element.label}
-                        defaultValue={element.value}
-                        helperText={element.helperText}
-                        onChange={this.handleFieldChange}
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                    >
-                    </ TextField>
+                    <Paper variant="outlined">
+                        <TextField
+                            key={element.id}
+                            id={element.id}
+                            label={element.label}
+                            defaultValue={element.value}
+                            helperText={element.helperText}
+                            onChange={this.handleFieldChange}
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                        >
+                        </ TextField>
+                    </Paper>
                 </Col>
             )
         })
@@ -102,7 +104,7 @@ export default class AttributeInput extends Component {
             this.props.array[5].helperText = this.attribMod(value)
         }
 
-        this.setState({reload: true})
+        this.setState({ reload: true })
     }
 
     render() {
