@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,15 +44,31 @@
   float: left;
 }
 
-.Root {
-  flex-grow: 1;
+.Left-side {
+  width: 60% !important;
+  border: 1px solid black;
+  float: left;
+  min-height: 130px !important;
+  align-content: center;
 }
 
-.Paper {
-  /* height: 140px,
-  width: 100px, */
+.Right-side {
+  width: 40% !important;
+  border: 1px solid black;
+  float: right;
+  min-height: 130px !important;
+  align-content: center;
 }
 
-.Control {
-  /* padding: theme.spacing(2), */
+.MuiFormControl-root {
+  border: 0;
+  margin: 0;
+  display: inline-flex;
+  padding: 0;
+  z-index: 0;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+  width: 90%;
 }
